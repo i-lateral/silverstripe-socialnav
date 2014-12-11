@@ -1,0 +1,24 @@
+{
+  "name": "i-lateral/silverstripe-socialnav",
+  "description": "Adds a list of social media services that generates a list of links in a template",
+    "type": "silverstripe-module",
+    "homepage": "http://github.com/i-lateral/silverstripe-socialnav",
+    "keywords": ["silverstripe", "social", "facebook", "twitter", "you tube", "linked in", "google plus"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "ilateral",
+            "email": "info@ilateral.co.uk"
+        }
+    ],
+    "support": {
+        "issues": "http://github.com/i-lateral/silverstripe-socialnav/issues"
+    },
+    "require": {
+        "silverstripe/framework": ">=3.1",
+        "silverstripe/cms": ">=3.1"
+    },
+    "extra": {
+        "installer-name": "socialnav"
+    }
+}
