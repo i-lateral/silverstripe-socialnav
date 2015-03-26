@@ -1,0 +1,6 @@
+en:
+  SocialNav:
+    SelectService: 'Select social media service'
+  SocialNavLink:
+    PLURALNAME: 'Social Nav Links'
+    SINGULARNAME: 'Social Nav Link'
