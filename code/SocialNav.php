@@ -26,7 +26,7 @@ class SocialNav extends ViewableData  {
         "Google Plus" => "Google Plus",
         "Linkedin" => "Linkedin",
         "YouTube" => "YouTube",
-        "Pintrest" => "Pintrest",
+        "Pinterest" => "Pinterest",
         "Instagram" => "Instagram",
         "Tumblr" => "Tumblr",
         "Etsy" => "Etsy"
