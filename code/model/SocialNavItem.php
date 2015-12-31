@@ -6,34 +6,37 @@
  * @author ilateral (http://www.ilateral.co.uk)
  * @package SocialNav
  */
-class SocialNavLink extends DataObject {
+class SocialNavLink extends DataObject
+{
     
-    static $db = array(
+    public static $db = array(
         "Service" => "Varchar",
         "Title" => "Varchar",
         "URL" => "Varchar(255)",
         "ExtraClasses" => "Varchar"
     );
     
-    static $has_one = array(
+    public static $has_one = array(
         "Parent" => "SiteConfig"
     );
     
-    static $casting = array(
+    public static $casting = array(
         "ConvertedService" => "Varchar"
     );
     
-    static $summary_fields = array(
+    public static $summary_fields = array(
         "Service",
         "Title",
         "URL"
     );
     
-    public function getConvertedService() {
+    public function getConvertedService()
+    {
         return Convert::raw2url($this->Service);
     }
     
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();
         
         $fields->removeByName("ParentID");
@@ -49,7 +52,8 @@ class SocialNavLink extends DataObject {
         return $fields;
     }
     
-    public function getCMSValidator() {
+    public function getCMSValidator()
+    {
         return new RequiredFields(array(
             "Service",
             "URL"

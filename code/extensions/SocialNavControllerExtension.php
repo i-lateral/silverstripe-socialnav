@@ -6,9 +6,11 @@
  * @author ilateral (http://www.ilateral.co.uk)
  * @package SocialNav
  */
-class SocialNavControllerExtension extends Extension {
+class SocialNavControllerExtension extends Extension
+{
 
-    public function SocialNav() {
+    public function SocialNav()
+    {
         return SocialNav::create();
     }
 }

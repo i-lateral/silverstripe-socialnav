@@ -6,13 +6,15 @@
  * @author ilateral (http://www.ilateral.co.uk)
  * @package SocialNav
  */
-class SocialNavSiteConfigExtension extends DataExtension {
+class SocialNavSiteConfigExtension extends DataExtension
+{
 
-    static $has_many = array(
+    public static $has_many = array(
         'SocialNavLinks' => 'SocialNavLink'
     );
 
-    public function updateCMSFields(FieldList $fields) {
+    public function updateCMSFields(FieldList $fields)
+    {
         $fields->removeByName('SocialNavLinks');
         
         // Setup compressed postage options
@@ -33,4 +35,3 @@ class SocialNavSiteConfigExtension extends DataExtension {
         $fields->addFieldToTab('Root.Main', $socialnav_fields);
     }
 }
-
