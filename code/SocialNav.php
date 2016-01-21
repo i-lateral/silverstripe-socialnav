@@ -5,7 +5,8 @@
  * 
  * @package Socialnav
  */
-class SocialNav extends ViewableData  {
+class SocialNav extends ViewableData
+{
     
     /**
      * List of supported social media services.
@@ -20,7 +21,7 @@ class SocialNav extends ViewableData  {
      * @var array
      * @config
      */
-    static $service_names = array(
+    public static $service_names = array(
         "Facebook" => "Facebook",
         "Twitter" => "Twitter",
         "Google Plus" => "Google Plus",
@@ -32,12 +33,14 @@ class SocialNav extends ViewableData  {
         "Etsy" => "Etsy"
     );
     
-    public function getMenuItems() {
+    public function getMenuItems()
+    {
         $config = SiteConfig::current_site_config();
         return $config->SocialNavLinks();
     }
     
-    public function getRendered() {
+    public function getRendered()
+    {
         return $this->renderwith("SocialNav");
     }
 }
