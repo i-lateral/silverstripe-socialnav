@@ -16,7 +16,7 @@ class SocialNavSiteConfigExtension extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
         $fields->removeByName('SocialNavLinks');
-        
+
         // Setup compressed postage options
         $socialnav_fields = ToggleCompositeField::create(
             'SocialNavFields',
