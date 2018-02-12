@@ -1,5 +1,15 @@
 <?php
 
+namespace ilateral\SilverStripe\SocialNav\Model;
+
+use SilverStripe\ORM\DataObject;
+use SilverStripe\SiteConfig\SiteConfig;
+use SilverStripe\ORM\DB;
+use SilverStripe\Core\Convert;
+use ilateral\SilverStripe\SocialNav\SocialNav;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\RequiredFields;
+
 /**
  * Represents an item in the Social Nav
  *
@@ -9,22 +19,24 @@
 class SocialNavLink extends DataObject
 {
 
-    public static $db = array(
+    private static $table_name = 'SocialNavLink';
+
+    private static $db = array(
         "Service" => "Varchar",
         "Title" => "Varchar",
         "URL" => "Varchar(255)",
         "ExtraClasses" => "Varchar"
     );
 
-    public static $has_one = array(
-        "Parent" => "SiteConfig"
+    private static $has_one = array(
+        "Parent" => SiteConfig::class
     );
 
-    public static $casting = array(
+    private static $casting = array(
         "ConvertedService" => "Varchar"
     );
 
-    public static $summary_fields = array(
+    private static $summary_fields = array(
         "Service",
         "Title",
         "URL"

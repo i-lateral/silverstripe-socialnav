@@ -2,10 +2,10 @@
 Name: socialnavconfig
 ---
 ## YML Config
-Controller:
+SilverStripe\Control\Controller:
   extensions:
-    - SocialNavControllerExtension
-SiteConfig:
+    - 'ilateral\SilverStripe\SocialNav\Extensions\ControllerExtension'
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - SocialNavSiteConfigExtension
+    - 'ilateral\SilverStripe\SocialNav\Extensions\SiteConfigExtension'
 

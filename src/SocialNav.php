@@ -1,5 +1,10 @@
 <?php
 
+namespace ilateral\SilverStripe\SocialNav;
+
+use SilverStripe\View\ViewableData;
+use SilverStripe\SiteConfig\SiteConfig;
+
 /**
  * Top level config holder for the social nav module
  *
@@ -21,7 +26,7 @@ class SocialNav extends ViewableData
      * @var array
      * @config
      */
-    public static $service_names = array(
+    private static $service_names = [
         "Facebook" => "Facebook",
         "Twitter" => "Twitter",
         "Google Plus" => "Google Plus",
@@ -31,7 +36,7 @@ class SocialNav extends ViewableData
         "Instagram" => "Instagram",
         "Tumblr" => "Tumblr",
         "Etsy" => "Etsy"
-    );
+    ];
 
     public function getMenuItems()
     {
@@ -41,6 +46,8 @@ class SocialNav extends ViewableData
 
     public function getRendered()
     {
-        return $this->renderwith("SocialNav");
+        return $this->renderwith(
+            SocialNav::class
+        );
     }
 }
