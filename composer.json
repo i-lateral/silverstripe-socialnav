@@ -1,7 +1,7 @@
 {
   "name": "i-lateral/silverstripe-socialnav",
   "description": "Adds a list of social media services that generates a list of links in a template",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "homepage": "http://github.com/i-lateral/silverstripe-socialnav",
     "keywords": ["silverstripe", "social", "facebook", "twitter", "you tube", "linked in", "google plus"],
     "license": "BSD-3-Clause",
