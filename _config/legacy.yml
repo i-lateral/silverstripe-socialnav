@@ -1,0 +1,6 @@
+---
+Name: socialnavlegacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    SocialNavLink: ilateral\SilverStripe\SocialNav\Model\SocialNavLink
